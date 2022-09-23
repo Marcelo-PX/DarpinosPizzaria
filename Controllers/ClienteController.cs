@@ -40,8 +40,8 @@ namespace DarpinosPizzaria.Controllers
         public IActionResult Deletar([FromRoute] int id)
         {
             Cliente cliente = _context.Clientes.Find(id);
-            
-            if(cliente != null)
+
+            if (cliente != null)
             {
                 _context.Clientes.Remove(cliente);
                 _context.SaveChanges();
@@ -64,7 +64,7 @@ namespace DarpinosPizzaria.Controllers
             catch
             {
                 return NotFound();
-            }    
+            }
         }
     }
 }

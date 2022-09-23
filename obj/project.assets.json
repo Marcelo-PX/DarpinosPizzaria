@@ -1255,31 +1255,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marce\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\eduardo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_src\\vscode\\aula-terca\\Projeto C# e Angular\\ProjetoAPI\\DarpinosPizzaria\\DarpinosPizzaria.csproj",
+      "projectUniqueName": "C:\\Users\\eduardo\\Desktop\\Darpinos\\DarpinosPizzaria\\DarpinosPizzaria.csproj",
       "projectName": "DarpinosPizzaria",
-      "projectPath": "C:\\_src\\vscode\\aula-terca\\Projeto C# e Angular\\ProjetoAPI\\DarpinosPizzaria\\DarpinosPizzaria.csproj",
-      "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "C:\\_src\\vscode\\aula-terca\\Projeto C# e Angular\\ProjetoAPI\\DarpinosPizzaria\\obj\\",
+      "projectPath": "C:\\Users\\eduardo\\Desktop\\Darpinos\\DarpinosPizzaria\\DarpinosPizzaria.csproj",
+      "packagesPath": "C:\\Users\\eduardo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eduardo\\Desktop\\Darpinos\\DarpinosPizzaria\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1331,7 +1324,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

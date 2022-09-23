@@ -8,7 +8,9 @@ Content-Type: application/json
 {
     "nome" : "Marcelo Pacheco",
     "telefone" : "41984960234",
-    "cpf" : "1234567890"
+    "cpf" : "1234567890",
+    "endereco" : "ADACADAD"
+    
 }
 
 ### Buscar um cliente por CPF
