@@ -1,8 +1,8 @@
 ### Listar clientes
-GET https://localhost:5001/api/cliente/listar
+GET https://localhost:5001/api/pizza/listar
 
 ### Cadastrar cliente
-POST https://localhost:5001/api/cliente/cadastrar
+POST https://localhost:5001/api/pizza/cadastrar
 Content-Type: application/json
 
 {
@@ -14,13 +14,13 @@ Content-Type: application/json
 }
 
 ### Buscar um cliente por CPF
-GET https://localhost:5001/api/cliente/buscar/1234567890
+GET https://localhost:5001/api/pizza/buscar/frango
 
 ### Deletar um cliente pelo ID
-DELETE https://localhost:5001/api/cliente/deletar/1
+DELETE https://localhost:5001/api/pizza/deletar/1
 
 ### Alterar um cliente
-PATCH  https://localhost:5001/api/cliente/alterar
+PATCH  https://localhost:5001/api/pizza/alterar
 Content-Type: application/json
 
 {

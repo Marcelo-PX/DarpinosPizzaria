@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using DarpinosPizzaria.Validations;
 
@@ -6,11 +5,11 @@ namespace DarpinosPizzaria.Models
 {
     public class Cliente
     {
+        [Key()]
         public int Id { get; set; }
 
-
         [Required(
-            ErrorMessage = "O campo nome é obrigatório!!!!"
+            ErrorMessage = "O campo nome é obrigatório!"
         )]
         public string Nome { get; set; }
 
@@ -20,7 +19,7 @@ namespace DarpinosPizzaria.Models
           MinimumLength = 11,
           ErrorMessage = "Numero de CPF deve conter 11 digitos!"
         )]
-        [CpfEmUso]
+        [CpfCadastrado]
         public string Cpf { get; set; }
 
 

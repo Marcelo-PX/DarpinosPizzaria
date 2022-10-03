@@ -8,14 +8,38 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DarpinosPizzaria.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220921010502_AdicionadoPizzaEValidacoes")]
-    partial class AdicionadoPizzaEValidacoes
+    [Migration("20221002234215_relacionamentos")]
+    partial class relacionamentos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.17");
+
+            modelBuilder.Entity("DarpinosPizzaria.Models.Cardapio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PizzaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Preco")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("PizzaId");
+
+                    b.ToTable("Cardapios");
+                });
 
             modelBuilder.Entity("DarpinosPizzaria.Models.Cliente", b =>
                 {
@@ -51,9 +75,6 @@ namespace DarpinosPizzaria.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<double>("Preco")
-                        .HasColumnType("REAL");
-
                     b.Property<string>("Sabor")
                         .HasColumnType("TEXT");
 
@@ -63,6 +84,25 @@ namespace DarpinosPizzaria.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pizzas");
+                });
+
+            modelBuilder.Entity("DarpinosPizzaria.Models.Cardapio", b =>
+                {
+                    b.HasOne("DarpinosPizzaria.Models.Cliente", "cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DarpinosPizzaria.Models.Pizza", "pizza")
+                        .WithMany()
+                        .HasForeignKey("PizzaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("cliente");
+
+                    b.Navigation("pizza");
                 });
 #pragma warning restore 612, 618
         }

@@ -25,12 +25,11 @@ namespace DarpinosPizzaria
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>
             (
-                options => options.UseSqlite("DataSource=clientes.db;Cache=shared")
+                options => options.UseSqlite("DataSource=pizzaria.db;Cache=shared")
             );
 
             services.AddControllers();
@@ -40,14 +39,11 @@ namespace DarpinosPizzaria
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DarpinosPizzaria v1"));
             }
 
             app.UseHttpsRedirection();
