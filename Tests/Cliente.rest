@@ -6,10 +6,8 @@ POST https://localhost:5001/api/pizza/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "Marcelo Pacheco",
-    "telefone" : "41984960234",
-    "cpf" : "1234567890",
-    "endereco" : "ADACADAD"
+    "sabor": "requeijao",
+    "tamanho" : "pequena"
     
 }
 
